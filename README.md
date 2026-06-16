@@ -4,10 +4,6 @@ An interactive, frontend-only simulation engine designed to demystify PostgreSQL
 
 Adjust workload patterns and internal engine parameters in real time to visualize data bloat cycles, estimated disk I/O impact, and worker behaviors without spinning up a live database.
 
-## 🚀 Live Demo
-👉 **[Insert Your Vercel/Netlify/GitHub Pages URL Here]**
-
----
 
 ## 🧐 Why This Matters
 Configuring PostgreSQL's autovacuum is historically seen as a "black box" for many software developers and DBAs. Suboptimal configurations can lead to massive table bloat or sudden disk I/O performance degradation. 
