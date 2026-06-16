@@ -1,75 +1,52 @@
-# React + TypeScript + Vite
+# PG_AUTO_SIM 🐘 📉
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, frontend-only simulation engine designed to demystify PostgreSQL's cost-based autovacuum and auto-analyze operations. 
 
-Currently, two official plugins are available:
+Adjust workload patterns and internal engine parameters in real time to visualize data bloat cycles, estimated disk I/O impact, and worker behaviors without spinning up a live database.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
+👉 **[Insert Your Vercel/Netlify/GitHub Pages URL Here]**
 
-## React Compiler
+---
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+## 🧐 Why This Matters
+Configuring PostgreSQL's autovacuum is historically seen as a "black box" for many software developers and DBAs. Suboptimal configurations can lead to massive table bloat or sudden disk I/O performance degradation. 
 
-Note: This will impact Vite dev & build performances.
+**PG_AUTO_SIM** accurately brings the internal token-bucket algorithms of PostgreSQL (specifically from `src/backend/postmaster/autovacuum.c`) directly to your web browser. 
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **Real-Time Simulation Engine:** Runs pure in-memory mathematical calculations using native TypeScript hooks. Every variation instantly updates your data structures.
+* **Zero Sliders/Ranges UI:** Built with precise numerical fields for deterministic configuration tuning.
+* **Visual 24-Hour Timeline:** Plots live `Dead Tuples` accumulation and cleanup thresholds using responsive charts (`Recharts`).
+* **I/O Throughput Predictor:** Automatically estimates real physical disk interactions (MB/s) using weighted averages for page hits, misses, and dirty state flushes.
+* **Dynamic Diagnostic Verdicts:** Uses algorithmic rule evaluation to categorize your system health instantly (Healthy, Inefficient, or Out of Control Bloat).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠️ Built With
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* **Framework:** React 18 (TypeScript)
+* **Build Tool:** Vite
+* **Styling:** Tailwind CSS (Slate/Dark DB Aesthetic)
+* **Charts:** Recharts
+* **Icons:** Lucide React
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📦 Getting Started
+
+Since this is a client-side-only app, you do not need docker, a local database, or a backend environment to run it.
+
+### Prerequisites
+* Node.js (v18.x or higher)
+* npm or yarn
+
+### Installation & Local Development
+
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/your-username/pg-vacuum-simulator.git](https://github.com/your-username/pg-vacuum-simulator.git)
+   cd pg-vacuum-simulator
