@@ -24,9 +24,9 @@ Configuring PostgreSQL's autovacuum is historically seen as a "black box" for ma
 
 ## 🛠️ Built With
 
-* **Framework:** React 18 (TypeScript)
+* **Framework:** React 19 (TypeScript)
 * **Build Tool:** Vite
-* **Styling:** Tailwind CSS (Slate/Dark DB Aesthetic)
+* **Styling:** Tailwind CSS
 * **Charts:** Recharts
 * **Icons:** Lucide React
 
@@ -37,12 +37,5 @@ Configuring PostgreSQL's autovacuum is historically seen as a "black box" for ma
 Since this is a client-side-only app, you do not need docker, a local database, or a backend environment to run it.
 
 ### Prerequisites
-* Node.js (v18.x or higher)
+* Node.js (v20.x or higher)
 * npm or yarn
-
-### Installation & Local Development
-
-1. **Clone the repository**
-   ```bash
-   git clone [https://github.com/your-username/pg-vacuum-simulator.git](https://github.com/your-username/pg-vacuum-simulator.git)
-   cd pg-vacuum-simulator
